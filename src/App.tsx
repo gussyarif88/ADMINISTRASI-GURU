@@ -24,77 +24,69 @@ const SAMPLE_RPP: SavedDocument = {
   formSnapshot: DEFAULT_FORM_STATE,
   content: `
 # RENCANA PELAKSANAAN PEMBELAJARAN (RPP)
-### MADRASAH TSANAWIYAH - KURIKULUM MERDEKA
+### BERBASIS PEMBELAJARAN MENDALAM (DEEP LEARNING) - KMA 1503
 
 ---
 
-## I. IDENTITAS DOKUMEN
-* **Nama Guru:** Ahmad Syarif, S.Pd.I
-* **NIP:** 198810122015031002
-* **Madrasah:** MIN 1 Kota Malang
-* **Mata Pelajaran:** Al-Qur'an Hadis
-* **Kelas / Semester:** Kelas VII (MTs) / Ganjil
-* **Materi Pokok:** Hukum Mad Jaiz Munfashil
-* **Alokasi Waktu:** 2 JP x 40 Menit (1 Pertemuan)
+## A. Spesifikasi
+1. **Madrasah:** MIN 1 Kota Malang
+2. **Mata Pelajaran:** Al-Qur'an Hadis
+3. **Fase / Kelas / Semester:** Fase D / Kelas VII (MTs) / Ganjil
+4. **Alokasi Waktu:** 2 JP x 40 Menit (1 Pertemuan)
+5. **Topik / Sub Topik:** Hukum Mad Jaiz Munfashil
 
----
+## B. Identifikasi
+1. **Kesiapan Murid (opsional):** Siswa memiliki minat tinggi dalam melafalkan ayat-ayat Al-Qur'an. Berdasarkan asesmen awal, 70% siswa sudah mengenal tajwid dasar, namun 30% siswa masih memerlukan bimbingan intensif dalam mengidentifikasi panjang ketukan mad.
+2. **Dimensi Profil Lulusan (DPL):**
+   * **Keimanan dan Ketakwaan terhadap Tuhan YME:** Siswa meyakini pentingnya membaca Al-Qur'an secara tartil sebagai perwujudan ibadah yang sah dan adab yang mulia terhadap wahyu-Nya.
+   * **Penalaran Kritis:** Siswa mampu menganalisis letak perbedaan hukum tajwid Mad Jaiz Munfashil dan Mad Wajib Muttashil dalam teks ayat-ayat Al-Qur'an.
+3. **Topik Panca Cinta KBC:**
+   * **Cinta Allah dan Rasul-Nya:** Terwujud lewat keinginan melafalkan kalam-Nya sesempurna mungkin.
+   * **Cinta Ilmu:** Tercermin dari semangat mendalami kaidah ilmu tajwid.
+4. **Materi Integrasi KBC:** Mensyukuri anugerah kesempurnaan lisan dan akal untuk membaca firman Allah secara tartil serta membiasakan adab kesantunan saat melafalkan Al-Qur'an.
 
-## II. CAPAIAN PEMBELAJARAN & TUJUAN PEMBELAJARAN
-### Capaian Pembelajaran (CP)
-> Peserta didik mampu memahami, menganalisis, dan mempraktikkan hukum bacaan Mad Jaiz Munfashil secara benar dan konsisten dalam membaca Al-Qur'an sehari-hari.
+## C. Desain Pembelajaran
+1. **Tujuan Pembelajaran (TP):**
+   * Melalui model Pembelajaran Mendalam, murid mampu menjelaskan pengertian dan syarat Mad Jaiz Munfashil secara kritis, serta mempraktikkan pelafalan ayat yang mengandung hukum tersebut dengan panjang 4-5 harakat secara tepat dan konsisten sebagai wujud cinta Allah dan Rasul-Nya.
+2. **Kerangka Pembelajaran:**
+   * **Praktik Pedagogis:** Pembelajaran Kontekstual (CTL) terintegrasi teknik *Peer Teaching*.
+   * **Kemitraan Pembelajaran:** Melibatkan kolaborasi dengan guru mapel Tahfidz untuk sinkronisasi target bacaan harian murid.
+   * **Lingkungan Pembelajaran:** Ruang kelas yang inklusif dengan pengaturan tempat duduk melingkar (U-Shape) untuk memfasilitasi kenyamanan diskusi kelompok kecil yang saling menghormati.
+   * **Pemanfaatan Digital:** Penggunaan visualisasi audio digital berupa video tutorial lafal hamzah di YouTube serta lembar pencatatan digital di Google Docs.
 
-### Tujuan Pembelajaran (TP)
-1. Siswa mampu menjelaskan pengertian, syarat, dan cara membaca hukum bacaan Mad Jaiz Munfashil dengan tepat.
-2. Siswa mampu mengidentifikasi serta menganalisis contoh-contoh Mad Jaiz Munfashil yang terdapat dalam Surat-surat pendek Al-Qur'an.
-3. Siswa mampu mendemonstrasikan kelancaran membaca Al-Qur'an yang mengandung hukum Mad Jaiz Munfashil secara tartil secara konsisten.
+## D. Pengalaman Belajar (Langkah-Langkah Pembelajaran)
+### 1. Kegiatan Awal (15 Menit) - *Berkesadaran, Bermakna, Menggembirakan*
+* **Orientasi Spiritual (Berkesadaran):** Guru membuka kelas dengan salam hangat penuh kasih sayang, dilanjutkan dengan doa dan teknik penarikan napas dalam-dalam sejenak agar murid hadir seutuhnya lahir batin.
+* **Apersepsi & Motivasi (Bermakna):** Guru menanyakan, *"Mengapa panjang pendek suara kita saat memanggil seseorang harus tepat? Bagaimana dengan membaca firman Allah?"* Guru mengaitkan keutamaan tajwid dengan kecintaan kita terhadap kalam-Nya.
 
----
+### 2. Kegiatan Inti (50 Menit)
+* **Memahami (Berkesadaran, Bermakna):**
+  * Guru menayangkan video peragaan pelafalan huruf Mad Thabi'i bertemu Hamzah di lain kalimat.
+  * Murid mengamati secara visual pergerakan organ suara dan berlatih menirukan suara hamzah secara bergantian dengan bimbingan guru.
+* **Mengaplikasi (Bermakna, Menggembirakan):**
+  * Murid berkelompok kecil (3-4 orang) berdiskusi untuk mencari, menandai, dan memotong kartu lafal yang mengandung Mad Jaiz Munfashil dari surat pendek pilihan.
+  * Setiap kelompok mendemonstrasikan pelafalan ayat tersebut di depan kelompok lain secara tartil dengan bimbingan tutor sebaya (*Peer Teaching*).
+* **Merefleksi (Berkesadaran, Menggembirakan):**
+  * Murid mengevaluasi kemajuan bacanya sendiri, mendiskusikan apa saja tantangan dalam mengendalikan ketukan mad, serta merumuskan cara melatih kelancaran di rumah secara mandiri.
 
-## III. KRITERIA KETERCAPAIAN TUJUAN PEMBELAJARAN (KKTP)
-* **KKTP Utama:** Siswa dinilai mencapai ketuntasan jika mampu melafalkan minimal 3 contoh ayat yang mengandung hukum Mad Jaiz Munfashil dengan panjang harakat yang konsisten (4-5 harakat).
-* **Skala Ketercapaian:**
-  * **Baru Berkembang (0-60):** Belum mampu membedakan Mad Jaiz Munfashil dengan mad lainnya.
-  * **Layak (61-75):** Mampu menjelaskan materi tetapi belum konsisten menerapkan panjang harakat.
-  * **Cakap (76-90):** Mampu mengidentifikasi dan melafalkan hukum tajwid secara konsisten dengan bimbingan minim.
-  * **Mahir (91-100):** Mampu membaca tartil dengan tajwid yang sempurna serta membantu melatih teman sebaya (Peer Teaching).
+### 3. Kegiatan Penutup (15 Menit) - *Berkesadaran, Bermakna, Menggembirakan*
+* **Refleksi & Umpan Balik:** Guru memandu kesimpulan bersama. Murid menempelkan sticky notes (*Exit Ticket*) yang menjawab pertanyaan, *"Satu hal berharga apa yang kamu syukuri setelah belajar tajwid hari ini?"*
+* **Doa Kontekstual:** Berdoa memohon agar dijadikan generasi yang mencintai Al-Qur'an, dan diakhiri dengan salam penutup yang khidmat.
 
----
+## E. Asesmen Pembelajaran
+1. **Asesmen Proses / Formatif:**
+   * **Asesmen Kesiapan:** Tanya jawab singkat di awal pembelajaran untuk memetakan pemahaman dasar.
+   * **Asesmen Sikap & Kemajuan (Formative as Learning):** Menggunakan lembar penilaian diri (*Self-Assessment*) dan lembar observasi ketekunan serta adab kesantunan selama diskusi kelompok.
+2. **Asesmen Akhir / Sumatif:**
+   * **Asesmen Kinerja:** Praktik melafalkan 3 baris ayat pilihan yang mengandung hukum Mad Jaiz Munfashil dengan ketukan panjang yang stabil (4-5 harakat).
 
-## IV. MATERI PEMBELAJARAN (RINGKASAN)
-1. **Pengertian:** Mad Jaiz Munfashil terjadi apabila ada Mad Thabi'i (Mad Ashli) bertemu dengan huruf Hamzah di lain kalimat (munfashil = terpisah).
-2. **Panjang Bacaan:** Dibaca sepanjang 2, 4, atau 5 harakat (ketukan). Namun untuk kehati-hatian dalam bacaan asy-Syatibiyyah, disarankan konsisten dibaca 4 atau 5 harakat.
-
----
-
-## V. SKENARIO PEMBELAJARAN (MODEL DEEP LEARNING)
-### A. Pendahuluan (15 Menit)
-1. **Orientasi Spiritual:** Guru membuka kelas dengan mengucapkan salam hangat penuh kasih sayang, dilanjutkan berdoa bersama yang dipimpin oleh salah satu siswa.
-2. **Motivasi Belajar:** Guru mengaitkan keutamaan mempelajari tajwid dengan hadis Nabi: *"Sebaik-baik kalian adalah orang yang mempelajari Al-Qur'an dan mengamalkannya"*.
-
-### B. Kegiatan Inti (50 Menit)
-1. **Eksplorasi Mendalam (Deep Exposure):**
-   * Guru menayangkan video visual cara kerja organ suara melafalkan hukum Mad Jaiz Munfashil.
-   * Siswa menyimak penjelasan visual dan melakukan imitasi suara secara klasikal.
-2. **Koneksi Kritis (Deep Connection):**
-   * Siswa dibentuk menjadi kelompok-kelompok kecil (diskusi kolaboratif) untuk mencari, menandai, dan memotong kartu lafal berisi Mad Jaiz Munfashil.
-3. **Penerapan Nyata (Deep Application):**
-   * Perwakilan kelompok mendemonstrasikan pelafalan ayat tersebut di depan kelas menggunakan teknik *Peer Teaching*.
-
-### C. Penutup (15 Menit)
-1. **Refleksi Bermakna:** Siswa mengevaluasi tingkat pemahaman mereka hari ini dengan menandai checklist refleksi pribadi.
-2. **Kesimpulan Beradab:** Guru merangkum esensi tajwid hukum mad sebagai sarana menjaga kesucian Al-Qur'an.
-
----
-
-## VI. ASESMEN PEMBELAJARAN
-### 1. Asesmen Sikap (Observasi Karakter)
-* **Kriteria:** Akhlakul Karimah, Kedisiplinan Beribadah, Rasa Hormat kepada Sesama Teman.
-
-### 2. Asesmen Pengetahuan (Formatif)
-* **Instruksi:** Tuliskan perbedaan mendasar antara Mad Wajib Muttashil dan Mad Jaiz Munfashil dalam bentuk tabel analisis disertai 2 contoh kalimat pendukung!
-
-### 3. Asesmen Keterampilan (Unjuk Kerja)
-* **Tugas:** Setor hafalan atau bacaan tartil QS. Al-Kafirun dengan melafalkan hukum mad secara konsisten sesuai aturan tajwid!
+## F. Lampiran-Lampiran
+1. **Bahan Bacaan:** Mad Jaiz Munfashil (Jaiz = boleh; Munfashil = terpisah) terjadi apabila huruf Mad Thabi'i berada di akhir kata bertemu Hamzah berharakat yang berada di awal kata berikutnya. Contoh: *Innaa a'thainaaka* dan *Laa a'budu*.
+2. **Rubrik Penilaian Ketuntasan (KKTP):**
+   * **Baru Berkembang (0-60):** Belum lancar membedakan letak Mad Jaiz Munfashil.
+   * **Layak (61-75):** Mampu menjelaskan materi tetapi ketukan panjang mad belum stabil.
+   * **Cakap (76-90):** Melafalkan hukum tajwid secara stabil dan konsisten dengan bimbingan minim.
+   * **Mahir (91-100):** Membaca tartil sempurna secara mandiri dan mampu membimbing teman sebaya.
 `
 };
 

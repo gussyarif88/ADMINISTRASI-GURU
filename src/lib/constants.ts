@@ -22,26 +22,22 @@ export const MODEL_PEMBELAJARAN_OPTIONS = [
 ];
 
 export const PANCA_CINTA_OPTIONS = [
-  "Cinta kepada Allah SWT",
-  "Cinta kepada Rasulullah SAW",
-  "Cinta kepada Orang Tua",
-  "Cinta kepada Sesama",
-  "Cinta kepada Lingkungan"
+  "Cinta Allah dan Rasul-Nya",
+  "Cinta Ilmu",
+  "Cinta Lingkungan",
+  "Cinta Diri dan Sesama Manusia",
+  "Cinta Tanah Air"
 ];
 
 export const DPL_OPTIONS = [
-  "Keimanan dan Ketakwaan kepada Allah SWT",
-  "Akhlakul Karimah (Karakter Mulia)",
-  "Berpikir Kritis (Critical Thinking)",
-  "Kreatif & Inovatif",
+  "Keimanan dan Ketakwaan terhadap Tuhan YME",
+  "Kewargaan",
+  "Penalaran Kritis",
+  "Kreativitas",
+  "Kolaborasi",
   "Kemandirian",
-  "Gotong Royong & Kolaboratif",
-  "Berkebinekaan Global",
-  "Literasi Digital & Teknologi",
-  "Kepemimpinan & Keteladanan",
-  "Tanggung Jawab Pribadi & Sosial",
-  "Komunikatif",
-  "Adaptif & Tangguh"
+  "Kesehatan",
+  "Komunikasi"
 ];
 
 export const SUBJECT_OPTIONS = [
@@ -77,7 +73,7 @@ export const CLASS_OPTIONS = [
 ];
 
 export const DEFAULT_FORM_STATE: FormDataState = {
-  teacherName: "Ahmad Syarif, S.Pd.I",
+  teacherName: "Agus Syarifuddin, S.Pd.I., GR.",
   nip: "198810122015031002",
   madrasahName: "MIN 1 Kota Malang",
   subject: "Al-Qur'an Hadis",
@@ -98,6 +94,6 @@ export const DEFAULT_FORM_STATE: FormDataState = {
   meetingsCount: 1,
   studentCharacteristics: "Siswa memiliki minat tinggi pada membaca Al-Qur'an, beberapa siswa masih memerlukan bimbingan panjang mad.",
   curriculum: "Kurikulum Merdeka",
-  pancaCinta: ["Cinta kepada Allah SWT", "Cinta kepada Rasulullah SAW"],
-  dpl: ["Keimanan dan Ketakwaan kepada Allah SWT", "Akhlakul Karimah (Karakter Mulia)", "Berpikir Kritis (Critical Thinking)"]
+  pancaCinta: ["Cinta Allah dan Rasul-Nya", "Cinta Ilmu"],
+  dpl: ["Keimanan dan Ketakwaan terhadap Tuhan YME", "Penalaran Kritis", "Kreativitas"]
 };

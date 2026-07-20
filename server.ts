@@ -98,31 +98,80 @@ app.post("/api/generate", async (req, res) => {
     switch (docType) {
       case "rpp":
         docSpecificInstructions = `
-Buatkan RPP (Rencana Pelaksanaan Pembelajaran) yang komprehensif, terstruktur, dan sangat rinci.
+Buatkan RPP (Rencana Pelaksanaan Pembelajaran) yang komprehensif, terstruktur, dan sangat rinci sesuai format resmi Panduan Pembelajaran dan Asesmen KMA 1503.
 RPP ini harus memuat struktur lengkap berikut dalam format Markdown berkualitas tinggi:
-1. IDENTITAS RPP (Nama Guru: ${teacherName || "-"}, NIP: ${nip || "-"}, Madrasah: ${madrasahName || "-"}, Mapel: ${subject || "-"}, Kelas/Semester: ${grade || "-"}/${semester || "-"}, Fase: ${phase || "-"}, Tahun Pelajaran: ${academicYear || "-"}, Alokasi Waktu: ${timeAllocation || "-"}, Pertemuan: ${meetingsCount || "1"} JP)
-2. CAPAIAN PEMBELAJARAN (CP) & TUJUAN PEMBELAJARAN (TP)
-3. ALUR TUJUAN PEMBELAJARAN (ATP) & KRITERIA KETERCAPAIAN TUJUAN PEMBELAJARAN (KKTP)
-4. INDIKATOR PENCAPAIAN TUJUAN PEMBELAJARAN
-5. PEMAHAMAN BERMAKNA & PERTANYAAN PEMANTIK
-6. PERSIAPAN PEMBELAJARAN (Guru & Peserta Didik)
-7. MEDIA, SARANA, DAN PRASARANA (Media: ${media || "-"}, Pendekatan: ${approach || "-"}, Model: ${learningModel || "-"}, Metode: ${method || "-"})
-8. LANGKAH-LANGKAH PEMBELAJARAN (Sangat rinci untuk tiap pertemuan yang mencakup: Kegiatan Pendahuluan, Kegiatan Inti dengan sintaks model '${learningModel || "-"}', dan Kegiatan Penutup)
-9. REFLEKSI (Refleksi Guru & Refleksi Peserta Didik)
-10. RENCANA TINDAK LANJUT (Pengayaan & Remedial)
-11. ASESMEN PEMBELAJARAN (Asesmen Diagnostik, Asesmen Formatif, dan Asesmen Sumatif lengkap dengan Rubrik Penilaian & Lembar Observasi Karakter)
-12. LAMPIRAN (Materi/Ringkasan Singkat & Lembar Kerja)
-13. DAFTAR PUSTAKA (Sesuai kaidah akademik)
+
+# RENCANA PELAKSANAAN PEMBELAJARAN (RPP)
+
+## A. Spesifikasi
+1. Madrasah: ${madrasahName || "-"}
+2. Mata Pelajaran: ${subject || "-"}
+3. Fase / Kelas / Semester: ${phase || "-"} / ${grade || "-"} / ${semester || "-"}
+4. Alokasi Waktu: ${timeAllocation || "-"}
+5. Topik / Sub Topik: ${topic || "-"}
+
+## B. Identifikasi
+1. Kesiapan Murid (opsional): ${studentCharacteristics || "-"} (Sediakan analisis kesiapan murid awal)
+2. Dimensi Profil Lulusan (DPL): Pilih dan tampilkan DPL yang relevan dari yang dicentang berikut:
+${dplText}
+3. Topik Panca Cinta KBC: Pilih dan tampilkan topik Panca Cinta yang relevan dari yang dicentang berikut:
+${pancaCintaText}
+4. Materi Integrasi KBC: Rumuskan materi integrasi karakter Panca Cinta KBC yang relevan dengan materi ini secara konkret dan beradab.
+
+## C. Desain Pembelajaran
+1. Tujuan Pembelajaran (TP): Tuliskan Tujuan Pembelajaran versi KBC secara holistik (menggabungkan pengetahuan, keterampilan, dan sikap/afektif dengan kata kunci seperti "sebagai wujud cinta..." atau "dengan kesadaran bahwa...").
+2. Kerangka Pembelajaran:
+   - Praktik Pedagogis: Model Pembelajaran yang digunakan adalah ${learningModel || "-"} dengan metode ${method || "-"}. Jelaskan bagaimana sintaksnya diintegrasikan.
+   - Kemitraan Pembelajaran (opsional): Rancang aktivitas kolaborasi dengan orang tua, sesama pendidik, atau pihak luar madrasah.
+   - Lingkungan Pembelajaran: Gambarkan rancangan lingkungan belajar fisik, virtual, atau budaya belajar yang aman, nyaman, dan saling memuliakan.
+   - Pemanfaatan Digital (opsional): Sebutkan gawai, media interaktif, video, atau platform yang digunakan (${media || "-"}).
+
+## D. Pengalaman Belajar (Langkah-Langkah Pembelajaran Berbasis Pembelajaran Mendalam)
+*Integrasikan prinsip Belajar Mendalam (Berkesadaran, Bermakna, Menggembirakan) di setiap tahap berikut:*
+1. Kegiatan Awal (Berkesadaran, Bermakna, Menggembirakan)
+   - Pembukaan, doa, sapaan ramah, pemusatan konsentrasi, apersepsi kritis spiritual, pemaparan tujuan, dan mengaitkan kebesaran Allah Swt.
+2. Kegiatan Inti:
+   - **Memahami** (Langkah-langkah aktif mengonstruksi pengetahuan esensial/aplikatif/nilai karakter melalui literasi, video, diskusi konseptual, atau tanya jawab pemantik).
+   - **Mengaplikasi** (Langkah-langkah aktif mengaplikasikan pemahaman ke dalam situasi nyata, pemecahan masalah konkret, pembuatan proyek, atau simulasi kontekstual).
+   - **Merefleksi** (Langkah-langkah refleksi mendalam, evaluasi mandiri, regulasi diri, menghubungkan dengan Panca Cinta, serta merumuskan ide/solusi baru ke depan).
+3. Kegiatan Penutup (Berkesadaran, Bermakna, Menggembirakan)
+   - Penguatan, kesimpulan bersama, jurnal refleksi singkat, exit ticket, apresiasi personal, doa kontekstual penegas nilai, dan salam penutup.
+
+## E. Asesmen Pembelajaran
+1. Asesmen Proses / Formatif:
+   - Asesmen Awal/Diagnostik (misalnya pertanyaan pemantik, kuis cepat).
+   - Asesmen Proses (misalnya rubrik observasi sikap, checklist kemajuan belajar, penilaian diri/sejawat/refleksi jurnal).
+2. Asesmen Akhir / Sumatif:
+   - Evaluasi ketercapaian tujuan pembelajaran (misalnya tes tertulis pilihan ganda/esai HOTS, unjuk kerja/performa, atau penilaian proyek).
+
+## F. Lampiran-Lampiran
+1. Ringkasan Materi & Bahan Bacaan (Materi secara nyata dan sangat lengkap, jangan gunakan placeholder).
+2. Lembar Kerja Peserta Didik (LKPD) Singkat.
+3. Rubrik Penilaian Detail & Lembar Observasi Karakter (tabel kriteria pencapaian Baru Berkembang, Layak, Cakap, Mahir).
+4. Daftar Pustaka (Referensi tepercaya sesuai KMA 1503).
         `;
         break;
 
       case "modul_ajar":
         docSpecificInstructions = `
 Buatkan Modul Ajar (MA) Kurikulum Merdeka Madrasah lengkap yang sangat mendalam dan interaktif.
-Modul Ajar harus memuat elemen:
-1. INFORMASI UMUM (Identitas, Kompetensi Awal, Profil Pelajar Pancasila & Rahmatan Lil Alamin, Sarana & Prasarana, Target Peserta Didik, Model Pembelajaran: ${learningModel})
-2. KOMPONEN INTI (Tujuan Pembelajaran, Pemahaman Bermakna, Pertanyaan Pemantik, Kegiatan Pembelajaran Rinci Berdasarkan Pertemuan, Asesmen Diagnostik/Formatif/Sumatif, Pengayaan & Remedial, Refleksi Guru & Siswa)
-3. LAMPIRAN (Lembar Kerja Peserta Didik - LKPD, Bahan Bacaan Guru & Peserta Didik, Glosarium, Daftar Pustaka)
+Modul Ajar ini harus memuat komponen utama berikut:
+1. INFORMASI UMUM:
+   - Identitas Modul (Nama Guru: ${teacherName}, NIP: ${nip}, Madrasah: ${madrasahName}, Mapel: ${subject}, Kelas/Semester: ${grade}/${semester}, Alokasi Waktu: ${timeAllocation})
+   - Kompetensi Awal & Kesiapan Murid
+   - Profil Pelajar Pancasila & Rahmatan Lil Alamin (terintegrasi DPL KMA 1503: ${dplText} dan Panca Cinta KBC: ${pancaCintaText})
+   - Sarana & Prasarana, Target Peserta Didik
+   - Model Pembelajaran: ${learningModel}
+2. KOMPONEN INTI:
+   - Tujuan Pembelajaran (TP) versi KBC holistik
+   - Pemahaman Bermakna & Pertanyaan Pemantik berbasis nilai spiritual/kehidupan
+   - Skenario Langkah Pembelajaran (Kegiatan Pendahuluan, Kegiatan Inti berbasis Pembelajaran Mendalam: Memahami, Mengaplikasi, Merefleksi, serta Kegiatan Penutup)
+   - Asesmen Pembelajaran (Asesmen Diagnostik awal, Asesmen Formatif proses, dan Asesmen Sumatif akhir beserta instrumen rubrik penilaian Baru Berkembang, Layak, Cakap, Mahir)
+   - Pengayaan & Remedial terarah (Remedial berfokus pada pendampingan ulang, bukan cuma soal tambahan)
+3. LAMPIRAN:
+   - Lembar Kerja Peserta Didik (LKPD) eksploratif
+   - Bahan Bacaan Guru & Peserta Didik
+   - Glosarium & Daftar Pustaka
         `;
         break;
 
