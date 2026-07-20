@@ -321,6 +321,29 @@ export default function App() {
         })
       });
 
+      if (!response.ok) {
+        const text = await response.text();
+        let errorMessage = "Terjadi kesalahan server saat menghubungi model Gemini.";
+        try {
+          const parsed = JSON.parse(text);
+          errorMessage = parsed.error || errorMessage;
+        } catch {
+          // It's likely HTML or generic text, extract first 200 chars or use a user friendly message
+          if (text.trim().startsWith("<!DOCTYPE") || text.includes("<html") || text.includes("The page c")) {
+            errorMessage = "Server mengembalikan halaman error (HTML). Kemungkinan server sedang restart atau tidak dapat merespons permintaan saat ini.";
+          } else {
+            errorMessage = text.substring(0, 200) || `Error ${response.status}: ${response.statusText}`;
+          }
+        }
+        throw new Error(errorMessage);
+      }
+
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        const text = await response.text();
+        throw new Error("Format respons dari server tidak valid (bukan JSON). Silakan hubungi admin.");
+      }
+
       const data = await response.json();
       if (data.success && data.text) {
         const typeLabel = type.replace("_", " ").toUpperCase();

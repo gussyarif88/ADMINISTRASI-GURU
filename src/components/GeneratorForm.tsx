@@ -162,6 +162,28 @@ export default function GeneratorForm({
           })
         });
 
+        if (!response.ok) {
+          const text = await response.text();
+          let errorMessage = "Gagal memproses file pada server.";
+          try {
+            const parsed = JSON.parse(text);
+            errorMessage = parsed.error || errorMessage;
+          } catch {
+            if (text.trim().startsWith("<!DOCTYPE") || text.includes("<html") || text.includes("The page c")) {
+              errorMessage = "Server mengembalikan halaman HTML/error. Kemungkinan server sedang restart.";
+            } else {
+              errorMessage = text.substring(0, 200) || `Error ${response.status}: ${response.statusText}`;
+            }
+          }
+          throw new Error(errorMessage);
+        }
+
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          const text = await response.text();
+          throw new Error("Respons dari server tidak valid (bukan JSON).");
+        }
+
         const resData = await response.json();
         if (resData.success && resData.data) {
           const parsed = resData.data;
@@ -226,6 +248,27 @@ export default function GeneratorForm({
           currentFormValues: formData
         })
       });
+
+      if (!response.ok) {
+        const text = await response.text();
+        let errorMessage = "Terjadi kesalahan pada server obrolan.";
+        try {
+          const parsed = JSON.parse(text);
+          errorMessage = parsed.error || errorMessage;
+        } catch {
+          if (text.trim().startsWith("<!DOCTYPE") || text.includes("<html") || text.includes("The page c")) {
+            errorMessage = "Server obrolan mengembalikan respons tidak valid (halaman HTML/error). Kemungkinan server sedang memuat ulang.";
+          } else {
+            errorMessage = text.substring(0, 150) || `Error ${response.status}: ${response.statusText}`;
+          }
+        }
+        throw new Error(errorMessage);
+      }
+
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Respons dari server obrolan bukan JSON.");
+      }
 
       const data = await response.json();
       if (data.success) {
