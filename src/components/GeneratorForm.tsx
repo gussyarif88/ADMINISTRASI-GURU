@@ -293,13 +293,14 @@ export default function GeneratorForm({
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12">
-      
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 relative">
+      <div className="bg-glow top-0 right-0 opacity-15 dark:opacity-30 pointer-events-none"></div>
+
       {/* LEFT: Tabbed Input Form */}
       <div className="lg:col-span-8 flex flex-col space-y-6">
         
         {/* Tab Header Navigation */}
-        <div className="flex items-center gap-1.5 p-1.5 bg-slate-100 dark:bg-slate-900/60 rounded-2xl border border-slate-200/50 dark:border-slate-800/40 backdrop-blur-md">
+        <div className="flex items-center gap-1.5 p-1.5 bg-slate-100 dark:bg-white/5 rounded-xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md">
           {[
             { id: "identitas", label: "1. Identitas & Mapel", icon: User },
             { id: "kurikulum", label: "2. Nilai & Kurikulum", icon: Heart },
@@ -311,27 +312,27 @@ export default function GeneratorForm({
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+                className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-semibold transition-all ${
                   activeTab === tab.id
-                    ? "bg-white dark:bg-slate-800 text-slate-800 dark:text-white shadow-sm font-bold border border-slate-200/10"
-                    : "text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
+                    ? "bg-white dark:bg-white/10 text-slate-800 dark:text-white shadow-sm font-bold border border-slate-200/10"
+                    : "text-slate-500 hover:text-slate-700 dark:text-white/40 dark:hover:text-white/80"
                 }`}
               >
                 <Icon className="w-3.5 h-3.5 flex-shrink-0" />
-                <span className="hidden sm:inline">{tab.label}</span>
+                <span className="hidden sm:inline font-display">{tab.label}</span>
               </button>
             );
           })}
         </div>
 
         {/* Form Panel container */}
-        <div className="p-6 rounded-3xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/50 shadow-md flex-1 flex flex-col justify-between">
+        <div className="p-6 rounded-xl bg-white/45 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200/50 dark:border-white/5 shadow-md flex-1 flex flex-col justify-between">
           
           <div className="space-y-6">
             
             {/* Feedback Notifications */}
             {uploadSuccessMsg && (
-              <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold flex items-start gap-2.5 animate-fadeIn">
+              <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold flex items-start gap-2.5 animate-fadeIn">
                 <Zap className="w-4.5 h-4.5 flex-shrink-0 animate-bounce" />
                 <div className="flex-1">
                   <p>{uploadSuccessMsg}</p>
@@ -348,9 +349,9 @@ export default function GeneratorForm({
             {/* TAB 1: IDENTITAS GURU & MAPEL */}
             {activeTab === "identitas" && (
               <div className="space-y-5 animate-fadeIn">
-                <div className="border-b border-slate-200/40 pb-3 mb-1">
-                  <h3 className="font-sans font-bold text-slate-800 dark:text-white text-base">Identitas Guru & Lembaga Madrasah</h3>
-                  <p className="text-xs text-slate-400 dark:text-slate-500">Sesuaikan data profil mengajar untuk dicetak pada kop/identitas dokumen</p>
+                <div className="border-b border-slate-200/40 dark:border-white/5 pb-3 mb-1">
+                  <h3 className="font-display font-bold text-slate-800 dark:text-white text-base">Identitas Guru & Lembaga Madrasah</h3>
+                  <p className="text-xs text-slate-400 dark:text-white/40">Sesuaikan data profil mengajar untuk dicetak pada kop/identitas dokumen</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -492,9 +493,9 @@ export default function GeneratorForm({
             {/* TAB 2: KURIKULUM & NILAI MADRASAH */}
             {activeTab === "kurikulum" && (
               <div className="space-y-5 animate-fadeIn">
-                <div className="border-b border-slate-200/40 pb-3 mb-1">
-                  <h3 className="font-sans font-bold text-slate-800 dark:text-white text-base">Kurikulum & Integrasi Nilai Madrasah</h3>
-                  <p className="text-xs text-slate-400 dark:text-slate-500">Semua dokumen SIPRIMA akan bernafaskan kearifan Islami yang dipilih berikut</p>
+                <div className="border-b border-slate-200/40 dark:border-white/5 pb-3 mb-1">
+                  <h3 className="font-display font-bold text-slate-800 dark:text-white text-base">Kurikulum & Integrasi Nilai Madrasah</h3>
+                  <p className="text-xs text-slate-400 dark:text-white/40">Semua dokumen SIPRIMA akan bernafaskan kearifan Islami yang dipilih berikut</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -577,9 +578,9 @@ export default function GeneratorForm({
             {/* TAB 3: MODEL & MEDIA PEMBELAJARAN */}
             {activeTab === "metode" && (
               <div className="space-y-5 animate-fadeIn">
-                <div className="border-b border-slate-200/40 pb-3 mb-1">
-                  <h3 className="font-sans font-bold text-slate-800 dark:text-white text-base">Model, Media & Indikator Belajar</h3>
-                  <p className="text-xs text-slate-400 dark:text-slate-500">Definisikan elemen metodologi agar RPP AI dirancang interaktif</p>
+                <div className="border-b border-slate-200/40 dark:border-white/5 pb-3 mb-1">
+                  <h3 className="font-display font-bold text-slate-800 dark:text-white text-base">Model, Media & Indikator Belajar</h3>
+                  <p className="text-xs text-slate-400 dark:text-white/40">Definisikan elemen metodologi agar RPP AI dirancang interaktif</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -687,9 +688,9 @@ export default function GeneratorForm({
             {/* TAB 4: UNGGAH DOKUMEN (PDF, WORD, EXCEL) */}
             {activeTab === "upload" && (
               <div className="space-y-5 animate-fadeIn">
-                <div className="border-b border-slate-200/40 pb-3 mb-1">
-                  <h3 className="font-sans font-bold text-slate-800 dark:text-white text-base">Unggah Silabus, Bab Materi, atau Buku Guru</h3>
-                  <p className="text-xs text-slate-400 dark:text-slate-500">Unggah file kurikulum lokal Anda. AI akan membaca isinya lalu mengisi seluruh form secara instan!</p>
+                <div className="border-b border-slate-200/40 dark:border-white/5 pb-3 mb-1">
+                  <h3 className="font-display font-bold text-slate-800 dark:text-white text-base">Unggah Silabus, Bab Materi, atau Buku Guru</h3>
+                  <p className="text-xs text-slate-400 dark:text-white/40">Unggah file kurikulum lokal Anda. AI akan membaca isinya lalu mengisi seluruh form secara instan!</p>
                 </div>
 
                 <div 
@@ -699,10 +700,10 @@ export default function GeneratorForm({
                   onDragLeave={handleDrag}
                   onDrop={handleDrop}
                   onClick={() => fileInputRef.current?.click()}
-                  className={`w-full p-8 rounded-3xl border-2 border-dashed transition-all duration-300 flex flex-col items-center justify-center text-center cursor-pointer min-h-[220px] ${
+                  className={`w-full p-8 rounded-xl border-2 border-dashed transition-all duration-300 flex flex-col items-center justify-center text-center cursor-pointer min-h-[220px] ${
                     dragActive 
                       ? "border-blue-500 bg-blue-500/5" 
-                      : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 bg-slate-50/50 dark:bg-slate-950/20"
+                      : "border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 bg-slate-50/50 dark:bg-white/5"
                   }`}
                 >
                   <input 
@@ -796,16 +797,16 @@ export default function GeneratorForm({
       </div>
 
       {/* RIGHT: AI Chat Assistant with Autofill */}
-      <div className="lg:col-span-4 flex flex-col h-[650px] lg:h-auto rounded-3xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/50 shadow-md overflow-hidden">
+      <div className="lg:col-span-4 flex flex-col h-[650px] lg:h-auto rounded-xl bg-white/45 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200/50 dark:border-white/5 shadow-md overflow-hidden">
         
         {/* Chat Header */}
-        <div className="p-4 bg-slate-50 dark:bg-slate-900/40 border-b border-slate-200/40 dark:border-slate-800/40 flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-inner">
+        <div className="p-4 bg-slate-50 dark:bg-slate-900/40 border-b border-slate-200/40 dark:border-white/5 flex items-center gap-3">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center text-white shadow-inner">
             <BrainCircuit className="w-5 h-5 animate-pulse" />
           </div>
           <div>
-            <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200">Asisten Kurikulum AI</h4>
-            <p className="text-[9px] text-slate-400 dark:text-slate-500 flex items-center gap-1 font-medium">
+            <h4 className="text-xs font-bold font-display text-slate-800 dark:text-white">Asisten Kurikulum AI</h4>
+            <p className="text-[9px] text-slate-400 dark:text-white/40 flex items-center gap-1 font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
               Online & Siap Membantu
             </p>

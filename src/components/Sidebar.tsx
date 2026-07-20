@@ -75,22 +75,22 @@ export default function Sidebar({
     <div className="flex flex-col h-full overflow-y-auto">
       {/* App Logo & Header */}
       <div className="p-6 flex items-center gap-3 border-b border-slate-200/10">
-        <div className="bg-gradient-to-tr from-emerald-500 via-blue-600 to-indigo-600 p-2.5 rounded-xl shadow-lg shadow-blue-500/10 flex items-center justify-center">
-          <GraduationCap className="w-6 h-6 text-white" />
+        <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center font-bold text-xl text-white shadow-lg shadow-blue-500/20">
+          S
         </div>
         <div>
-          <h1 className="font-sans font-bold text-lg bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-200 bg-clip-text text-transparent flex items-center gap-1.5 leading-none">
-            SIPRIMA <span className="text-xs bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 py-0.5 px-1.5 rounded-full font-semibold border border-emerald-500/20">AI</span>
+          <h1 className="font-display font-bold text-lg tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-white/60 bg-clip-text text-transparent flex items-center gap-1.5 leading-none">
+            SIPRIMA <span className="text-[10px] bg-blue-600/10 text-blue-600 dark:text-blue-400 py-0.5 px-1.5 rounded-full font-bold border border-blue-500/20">AI</span>
           </h1>
-          <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 font-medium font-sans">RPP Madrasah Pintar</p>
+          <p className="text-[10px] text-slate-500 dark:text-white/40 mt-1 font-medium font-sans">RPP Madrasah Pintar</p>
         </div>
       </div>
 
       {/* Menus List */}
-      <div className="flex-1 px-4 py-4 space-y-6">
+      <div className="flex-1 px-4 py-5 space-y-6">
         {/* Main Section */}
         <div>
-          <p className="px-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">Utama</p>
+          <p className="px-3 text-[10px] font-bold text-slate-400 dark:text-white/30 uppercase tracking-widest mb-3">Menu Utama</p>
           <div className="space-y-1">
             {mainMenus.map((menu) => {
               const Icon = menu.icon;
@@ -100,13 +100,13 @@ export default function Sidebar({
                   key={menu.id}
                   id={`btn-${menu.id}`}
                   onClick={() => selectView(menu.id)}
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive 
-                      ? "bg-blue-600 text-white shadow-lg shadow-blue-600/15" 
-                      : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50"
+                      ? "bg-blue-600/10 text-blue-600 dark:text-blue-400 border-r-2 border-blue-600 rounded-lg font-semibold" 
+                      : "text-slate-600 hover:text-slate-900 dark:text-white/60 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5"
                   }`}
                 >
-                  <Icon className="w-4 h-4 flex-shrink-0" />
+                  <Icon className="w-4.5 h-4.5 flex-shrink-0" />
                   <span>{menu.label}</span>
                 </button>
               );
@@ -116,9 +116,9 @@ export default function Sidebar({
 
         {/* AI Generator Tools */}
         <div>
-          <div className="px-3 flex items-center justify-between mb-2">
-            <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">AI Generator</p>
-            <Sparkles className="w-3 h-3 text-emerald-500 animate-pulse" />
+          <div className="px-3 flex items-center justify-between mb-3">
+            <p className="text-[10px] font-bold text-slate-400 dark:text-white/30 uppercase tracking-widest">AI Generator</p>
+            <Sparkles className="w-3 h-3 text-teal-500 animate-pulse" />
           </div>
           <div className="space-y-1">
             {generatorMenus.map((menu) => {
@@ -129,10 +129,10 @@ export default function Sidebar({
                   key={menu.id}
                   id={`btn-${menu.id}`}
                   onClick={() => selectView(menu.id)}
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                  className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive 
-                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-500/10" 
-                      : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50"
+                      ? "bg-blue-600/10 text-blue-600 dark:text-blue-400 border-r-2 border-blue-600 rounded-lg font-semibold" 
+                      : "text-slate-600 hover:text-slate-900 dark:text-white/60 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5"
                   }`}
                 >
                   <Icon className="w-4 h-4 flex-shrink-0" />
@@ -145,7 +145,7 @@ export default function Sidebar({
 
         {/* Documents & Settings */}
         <div>
-          <p className="px-3 text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">Manajemen</p>
+          <p className="px-3 text-[10px] font-bold text-slate-400 dark:text-white/30 uppercase tracking-widest mb-3">Manajemen</p>
           <div className="space-y-1">
             {utilityMenus.map((menu) => {
               const Icon = menu.icon;
@@ -155,10 +155,10 @@ export default function Sidebar({
                   key={menu.id}
                   id={`btn-${menu.id}`}
                   onClick={() => selectView(menu.id)}
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                  className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive 
-                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-600/15" 
-                      : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50"
+                      ? "bg-blue-600/10 text-blue-600 dark:text-blue-400 border-r-2 border-blue-600 rounded-lg font-semibold" 
+                      : "text-slate-600 hover:text-slate-900 dark:text-white/60 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5"
                   }`}
                 >
                   <Icon className="w-4 h-4 flex-shrink-0" />
@@ -171,26 +171,26 @@ export default function Sidebar({
       </div>
 
       {/* Bottom Profile and Theme Toggle */}
-      <div className="p-4 border-t border-slate-200/10 space-y-3 bg-slate-50/50 dark:bg-slate-900/40">
+      <div className="p-4 border-t border-slate-200/10 space-y-3 bg-slate-50/50 dark:bg-black/20">
         <div className="flex items-center justify-between px-2">
-          <span className="text-xs text-slate-400 dark:text-slate-500 font-medium">Mode Tampilan</span>
+          <span className="text-[11px] text-slate-400 dark:text-white/40 font-medium uppercase tracking-wider">Mode Tampilan</span>
           <button
             id="theme-toggle"
             onClick={() => setDarkMode(!darkMode)}
-            className="p-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-750 text-slate-700 dark:text-yellow-400 transition-colors"
+            className="p-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 dark:bg-white/5 dark:hover:bg-white/10 text-slate-700 dark:text-yellow-400 transition-colors"
             title={darkMode ? "Aktifkan Mode Terang" : "Aktifkan Mode Gelap"}
           >
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
         </div>
 
-        <div className="flex items-center gap-3 p-2 rounded-xl bg-white/40 dark:bg-slate-800/30 border border-slate-200/10">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-inner flex-shrink-0">
-            {teacherName ? teacherName.charAt(0) : "G"}
+        <div className="flex items-center gap-3 p-2.5 rounded-xl bg-white/40 dark:bg-white/5 border border-slate-200/10">
+          <div className="w-8 h-8 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center font-bold text-xs">
+            {teacherName ? teacherName.substring(0, 2).toUpperCase() : "HU"}
           </div>
           <div className="overflow-hidden">
-            <h4 className="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">{teacherName || "Guru Madrasah"}</h4>
-            <p className="text-[10px] text-slate-500 dark:text-slate-400 truncate">{madrasahName || "Kementerian Agama RI"}</p>
+            <h4 className="text-xs font-semibold text-slate-800 dark:text-white truncate">{teacherName || "Guru Madrasah"}</h4>
+            <p className="text-[10px] text-slate-500 dark:text-white/40 truncate">{madrasahName || "Senior Madrasah Expert"}</p>
           </div>
         </div>
       </div>
