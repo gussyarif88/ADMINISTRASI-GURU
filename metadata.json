@@ -1,0 +1,6 @@
+{
+  "name": "SIPRIMA AI",
+  "description": "Sistem Pintar RPP Madrasah Berbasis Artificial Intelligence untuk Guru MI, MTs, MA, dan MAK di Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
